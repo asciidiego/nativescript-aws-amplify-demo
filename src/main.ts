@@ -3,4 +3,9 @@ import { platformNativeScriptDynamic } from "nativescript-angular/platform";
 
 import { AppModule } from "./app/app.module";
 
+import API from "@aws-amplify/api";
+import awsconfig from "./aws-exports";
+
+API.configure(awsconfig);
+
 platformNativeScriptDynamic().bootstrapModule(AppModule);
